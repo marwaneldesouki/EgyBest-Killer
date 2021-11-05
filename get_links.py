@@ -30,7 +30,6 @@ def ShowSuggestions(name):
         response = req.text
         movie_namelink = f'"t":"(.*?)","u":"(.*?)","i'
         for found in re.finditer(movie_namelink, response):
-            print(found)
             movies.append([found.group(1), found.group(2)])
         print(movies)
     except:
@@ -276,8 +275,8 @@ def get_series_Links(link):
         strlink = found.group(1).replace("/stream/", "/watch/")
         short_links(strlink)
 
-thread = threading.Thread(target=print(get_MovieDetails("movie/the-egyptian-1954")))
-thread.start()
+# thread = threading.Thread(target=print(get_MovieDetails("movie/the-egyptian-1954")))
+# thread.start()
 #thread = threading.Thread(target=print(get_SeriesDetails("series/squid-game")))
 #thread.start()
 
