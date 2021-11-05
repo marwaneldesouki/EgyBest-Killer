@@ -1,6 +1,6 @@
-# from os import system
-# system('pip install -r requirements.txt')
-# system('pip install --upgrade pip')
+from os import system
+system('pip install -r requirements.txt')
+system('pip install --upgrade pip')
 
 
 from telegram import update,Chat
